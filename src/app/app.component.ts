@@ -3,6 +3,8 @@ import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { AuthenticatorComponent } from './tools/authenticator/authenticator.component';
 import { FirebaseTSAuth } from 'firebasets/firebasetsAuth/firebaseTSAuth';
 import { Router } from '@angular/router';
+import { FirebaseTSFirestore } from 'firebasets/firebasetsFirestore/firebaseTSFirestore';
+import firebase from 'firebase';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +14,9 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'mediagram';
   auth = new FirebaseTSAuth();
+  firestore = new FirebaseTSFirestore();
+  userHasProfile = true;
+  userDocument!: UserDocument;
 
   constructor(private loginsheet: MatBottomSheet, private router: Router) {
     this.auth.listenToSignInStateChanges((user) => {
@@ -21,9 +26,22 @@ export class AppComponent {
         whenSignedInAndEmailNotVerified: (user) => {
           this.router.navigate(['emailVerification']);
         },
-        whenSignedInAndEmailVerified: (user) => {},
+        whenSignedInAndEmailVerified: (user) => {
+          this.getUserProfile();
+        },
         whenChanged: (user) => {},
       });
+    });
+  }
+  getUserProfile() {
+    this.firestore.listenToDocument({
+      name: 'Getting Document',
+      path: ['Users', this.auth.getAuth().currentUser!.uid],
+      onUpdate: (result) => {
+        this.userDocument = <UserDocument>result.data();
+
+        this.userHasProfile = result.exists;
+      },
     });
   }
   onLogoutClick() {
@@ -35,4 +53,9 @@ export class AppComponent {
   onLoginClick() {
     this.loginsheet.open(AuthenticatorComponent);
   }
+}
+
+export interface UserDocument {
+  publicName: string;
+  description: string;
 }

@@ -1,7 +1,7 @@
 <div id="nav-bar">
   <div id="nav-bar-content">
     <div id="nav-bar-left">
-      <div class="nav-bar-items">SocialPlaceholder</div>
+      <div class="nav-bar-items">Better SocialGram</div>
     </div>
     <div id="nav-bar-right">
       <div
@@ -12,6 +12,10 @@
       >
         Login
       </div>
+      <div *ngIf="loggedIn() && userHasProfile" class="nav-bar-items">
+        Benvenuto {{ userDocument.publicName }}
+      </div>
+
       <div *ngIf="loggedIn()" (click)="onLogoutClick()" class="nav-bar-items">
         Logout
       </div>
@@ -19,3 +23,4 @@
   </div>
 </div>
 <router-outlet></router-outlet>
+<app-profile [show]="loggedIn() && !userHasProfile"></app-profile>
