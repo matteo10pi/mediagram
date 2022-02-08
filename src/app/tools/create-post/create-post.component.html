@@ -3,7 +3,10 @@
     <mat-card-title>Crea un nuovo post</mat-card-title>
   </mat-card-header>
   <div>
-    <textarea placeholder="Scrivi qui una descrizione..."></textarea>
+    <textarea
+      #commentInput
+      placeholder="Scrivi qui una descrizione..."
+    ></textarea>
   </div>
   <div id="post-preview" *ngIf="selectedImageFile">
     <img id="post-preview-image" />
@@ -20,6 +23,8 @@
         /><mat-icon>insert_photo</mat-icon>
       </label>
     </button>
-    <button mat-flat-button color="warn">Invia</button>
+    <button (click)="onPostClick(commentInput)" mat-flat-button color="warn">
+      Invia
+    </button>
   </mat-card-actions>
 </mat-card>

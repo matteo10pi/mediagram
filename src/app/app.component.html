@@ -13,7 +13,7 @@
         Login
       </div>
       <div *ngIf="loggedIn() && userHasProfile" class="nav-bar-items">
-        Benvenuto {{ userDocument.publicName }}
+        Benvenuto {{ getUsername() }}
       </div>
 
       <div *ngIf="loggedIn()" (click)="onLogoutClick()" class="nav-bar-items">
