@@ -20,7 +20,8 @@
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  color: white;
+  color: rgb(255, 72, 0);
+  font-weight: 500;
 }
 #nav-bar-right {
   justify-content: flex-end;
@@ -30,4 +31,9 @@
   display: inline-block;
   cursor: pointer;
   margin-right: 1em;
+}
+.nav-bar-items > a {
+  text-decoration: none;
+  color: rgb(255, 72, 0);
+  font-weight: 500;
 }

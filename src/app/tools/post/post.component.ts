@@ -13,6 +13,7 @@ export class PostComponent implements OnInit {
   @Input() postData!: PostData;
   creatorName!: string;
   creatorDescription!: string;
+  favoriteClicked: boolean = false;
   firestore = new FirebaseTSFirestore();
   constructor(private dialog: MatDialog) {}
 
@@ -32,5 +33,9 @@ export class PostComponent implements OnInit {
 
   onReplyClick() {
     this.dialog.open(ReplyComponent, { data: this.postData.postId });
+  }
+
+  onLikeClick() {
+    this.favoriteClicked = !this.favoriteClicked;
   }
 }

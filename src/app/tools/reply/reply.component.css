@@ -44,6 +44,6 @@ input {
   text-align: end;
 }
 .creator-comment {
-  background-color: tomato;
+  background-color: rgb(40, 94, 165);
   color: white;
 }

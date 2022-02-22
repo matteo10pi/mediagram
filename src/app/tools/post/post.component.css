@@ -2,3 +2,8 @@
   margin-left: 0.5em;
   cursor: pointer;
 }
+mat-card {
+  margin-top: 2em;
+  padding: 1.5em;
+  border: solid 1px black;
+}
