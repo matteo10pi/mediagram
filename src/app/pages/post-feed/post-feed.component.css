@@ -4,9 +4,13 @@
   right: 2em;
 }
 
-#post-feed {
+.post-feed {
   max-width: 500px;
   margin-top: 5em;
   margin-left: auto;
   margin-right: auto;
+}
+
+.post-feed-card {
+  padding-bottom: 1em;
 }

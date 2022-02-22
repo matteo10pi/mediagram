@@ -18,6 +18,7 @@ import { PostFeedComponent } from './pages/post-feed/post-feed.component';
 import { CreatePostComponent } from './tools/create-post/create-post.component';
 import { PostComponent } from './tools/post/post.component';
 import { ReplyComponent } from './tools/reply/reply.component';
+import { FooterComponent } from './layout/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { ReplyComponent } from './tools/reply/reply.component';
     CreatePostComponent,
     PostComponent,
     ReplyComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
