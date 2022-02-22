@@ -1,4 +1,4 @@
-#profile {
+.profile {
   position: fixed;
   top: 0;
   right: 0;
@@ -17,7 +17,7 @@
 .idle {
   width: 0;
 }
-#profile-content {
+.profile-content {
   width: 100%;
   max-width: 500px;
   padding: 2em;

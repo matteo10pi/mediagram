@@ -20,7 +20,7 @@
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  color: rgb(255, 72, 0);
+  color: rgb(255, 255, 255);
   font-weight: 500;
 }
 #nav-bar-right {
@@ -34,6 +34,6 @@
 }
 .nav-bar-items > a {
   text-decoration: none;
-  color: rgb(255, 72, 0);
+  color: rgb(255, 255, 255);
   font-weight: 500;
 }

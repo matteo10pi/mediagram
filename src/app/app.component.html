@@ -2,7 +2,7 @@
   <div id="nav-bar-content">
     <div id="nav-bar-left">
       <div class="nav-bar-items">
-        <a href="#" routerLink="">Better SocialGram</a>
+        <a href="#" routerLink="">MediaGram</a>
       </div>
     </div>
     <div id="nav-bar-right">
@@ -15,11 +15,11 @@
         Login
       </div>
       <div *ngIf="loggedIn() && userHasProfile" class="nav-bar-items">
-        Benvenuto {{ getUsername() }}
+        Welcome {{ getUsername() }}
       </div>
 
       <div *ngIf="loggedIn()" (click)="onLogoutClick()" class="nav-bar-items">
-        Logout
+        <a href="#" routerLink=""> Logout</a>
       </div>
     </div>
   </div>

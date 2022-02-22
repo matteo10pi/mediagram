@@ -7,4 +7,19 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  /* background-image: url(./assets/background.jpg);
+  background-size: cover;
+  background-position: center;*/
+  background-attachment: fixed;
+  background-image: linear-gradient(
+    to left top,
+    #062657,
+    #612c6d,
+    #a82d66,
+    #d84a48,
+    #e58114
+  );
+}
+.mat-bottom-sheet-container {
+  background-color: rgba(240, 248, 255, 0.11);
 }
