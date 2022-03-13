@@ -5,7 +5,7 @@ Un semplice social media che permette di condividere contenuti testuali e multim
 ![](https://raw.githubusercontent.com/matteo10pi/mediagram/main/src/assets/1.jpg)
 
 
-##Nel dettaglio##
+## Nel dettaglio ##
 - Creazione di un profilo utente:
 	- Verifica email
 	- Recupero password dimenticata
