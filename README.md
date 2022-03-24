@@ -6,7 +6,7 @@ Un semplice social media che permette di condividere contenuti testuali e multim
 
 
 ## Nel dettaglio ##
-- Creazione di un profilo utente:
+- Creazione di un profilo utente: 
 	- Verifica email
 	- Recupero password dimenticata
 	- Al primo accesso si dovrà scegliere un nickname ed una  breve descrizione
