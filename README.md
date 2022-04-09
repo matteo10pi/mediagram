@@ -17,7 +17,7 @@ Un semplice social media che permette di condividere contenuti testuali e multim
 
 ## Tecnologie utilizzate ##
 - Angular 13 e Material.
-- Firebase per poter gestire il backend
+- Firebase per poter gestire il backend.
 
 
 
