@@ -16,7 +16,7 @@ Un semplice social media che permette di condividere contenuti testuali e multim
 ![](https://raw.githubusercontent.com/matteo10pi/mediagram/main/src/assets/2.jpg)
 
 ## Tecnologie utilizzate ##
-- Angular 13 e Material.
+- Angular 13 e Material
 - Firebase per poter gestire il backend.
 
 
